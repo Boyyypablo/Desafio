@@ -1,3 +1,4 @@
+// Camada de acesso aos dados. Le e grava no arquivo pedidos.json
 const fs = require('fs').promises;
 const path = require('path');
 

@@ -2,6 +2,7 @@ const crypto = require('crypto');
 const pedidosRepository = require('../repository/pedidosRepository');
 const { validateTransition } = require('./stateMachine');
 
+// Gera um UUID. Usa crypto.randomUUID se disponivel, senao gera manualmente
 function generateId() {
   if (crypto.randomUUID) {
     return crypto.randomUUID();
@@ -13,6 +14,7 @@ function generateId() {
   });
 }
 
+// Monta um pedido novo. Sempre comeca com status RECEIVED
 function buildNewPedido(body) {
   const orderId = body.order_id || generateId();
   const now = Date.now();
@@ -58,6 +60,7 @@ async function update(orderId, body) {
   return pedidosRepository.update(orderId, updates);
 }
 
+// Atualiza o status do pedido respeitando as transicoes da state machine
 async function updateStatus(orderId, newStatus) {
   const existing = await pedidosRepository.findById(orderId);
   if (!existing) return { success: false, error: 'Pedido não encontrado' };

@@ -68,6 +68,25 @@ docker run -p 3000:3000 -v ${PWD}/pedidos.json:/app/pedidos.json delivery-api
 
 ---
 
+## Testes e qualidade de código
+
+```bash
+# Rodar os testes
+npm test
+
+# Rodar o lint
+npm run lint
+
+# Formatar o código
+npm run format
+```
+
+- **Jest** para testes unitários (state machine, validators, service)
+- **ESLint** para manter padrão no código
+- **Prettier** para formatação automática
+
+---
+
 ## Hipóteses assumidas
 
 - Todo pedido novo começa no status `RECEIVED`, sem exceção.

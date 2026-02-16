@@ -1,3 +1,4 @@
+// Schemas de validacao de entrada usando Zod
 const { z } = require('zod');
 
 const statusSchema = z.enum(['RECEIVED', 'CONFIRMED', 'DISPATCHED', 'DELIVERED', 'CANCELED']);

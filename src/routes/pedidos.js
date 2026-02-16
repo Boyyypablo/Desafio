@@ -1,3 +1,4 @@
+// Rotas da API de pedidos. Recebe as requisicoes e delega pro service
 const express = require('express');
 const router = express.Router();
 const pedidosService = require('../services/pedidosService');
