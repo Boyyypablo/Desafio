@@ -1,0 +1,150 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: system-ui, -apple-system, sans-serif;
+  background: #f5f5f5;
+  color: #333;
+  line-height: 1.5;
+}
+
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 1.5rem;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+h1 {
+  font-size: 1.5rem;
+  color: #222;
+}
+
+.filters {
+  display: flex;
+  gap: 0.5rem;
+}
+
+select {
+  padding: 0.5rem 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 0.9rem;
+}
+
+button {
+  padding: 0.5rem 1rem;
+  background: #2563eb;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+button:hover {
+  background: #1d4ed8;
+}
+
+#loading {
+  text-align: center;
+  padding: 2rem;
+  color: #666;
+}
+
+#pedidosList {
+  list-style: none;
+}
+
+.pedido-card {
+  background: white;
+  border-radius: 8px;
+  padding: 1rem 1.25rem;
+  margin-bottom: 0.75rem;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.pedido-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.pedido-header .btn-details {
+  flex-shrink: 0;
+  padding: 0.35rem 0.75rem;
+  font-size: 0.8rem;
+  background: #f1f5f9;
+  color: #475569;
+}
+
+.pedido-header .btn-details:hover {
+  background: #e2e8f0;
+  color: #334155;
+}
+
+.pedido-details-wrap {
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid #e2e8f0;
+}
+
+.pedido-details {
+  font-size: 0.85rem;
+  color: #475569;
+}
+
+.pedido-details h4 {
+  font-size: 0.8rem;
+  color: #64748b;
+  margin: 0.75rem 0 0.25rem;
+  font-weight: 600;
+}
+
+.pedido-details h4:first-child {
+  margin-top: 0;
+}
+
+.pedido-details p {
+  margin: 0;
+  line-height: 1.5;
+}
+
+.pedido-card h3 {
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+  color: #111;
+}
+
+.pedido-meta {
+  font-size: 0.85rem;
+  color: #666;
+  margin-bottom: 0.25rem;
+}
+
+.status {
+  display: inline-block;
+  padding: 0.2rem 0.5rem;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  margin-top: 0.5rem;
+}
+
+.status-RECEIVED { background: #fef3c7; color: #92400e; }
+.status-CONFIRMED { background: #dbeafe; color: #1e40af; }
+.status-DISPATCHED { background: #e0e7ff; color: #3730a3; }
+.status-DELIVERED { background: #d1fae5; color: #065f46; }
+.status-CANCELED { background: #fee2e2; color: #991b1b; }

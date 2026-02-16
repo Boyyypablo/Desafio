@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Delivery API - Pedidos</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Pedidos Delivery</h1>
+      <div class="filters">
+        <select id="filterStatus">
+          <option value="">Todos os status</option>
+          <option value="RECEIVED">Recebido</option>
+          <option value="CONFIRMED">Confirmado</option>
+          <option value="DISPATCHED">Despachado</option>
+          <option value="DELIVERED">Entregue</option>
+          <option value="CANCELED">Cancelado</option>
+        </select>
+        <select id="sortBy">
+          <option value="created_desc">Mais recentes</option>
+          <option value="created_asc">Mais antigos</option>
+          <option value="total_desc">Maior valor</option>
+          <option value="total_asc">Menor valor</option>
+          <option value="status">Por status</option>
+        </select>
+        <button id="btnRefresh">Atualizar</button>
+      </div>
+    </header>
+    <main>
+      <div id="loading">Carregando pedidos...</div>
+      <ul id="pedidosList"></ul>
+    </main>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>
