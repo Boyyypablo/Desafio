@@ -67,6 +67,18 @@ docker run -p 3000:3000 -v ${PWD}/pedidos.json:/app/pedidos.json delivery-api
 
 
 ---
+
+## Hipóteses assumidas
+
+- Todo pedido novo começa no status `RECEIVED`, sem exceção.
+- O `order_id` é o identificador único do pedido. Pode ser enviado no POST ou gerado automaticamente.
+- DELETE apaga o pedido de verdade (exclusão física). Não tem soft delete.
+- Os dados ficam salvos no arquivo `pedidos.json` (sem banco de dados).
+- GET `/api/pedidos` aceita filtros opcionais por `status` e `store_id` via query string.
+- A estrutura dos pedidos segue o mesmo formato do `pedidos.json` entregue no desafio.
+
+---
+
 ## Backlog de Desenvolvimento
 
 01. Setup do Projeto: Inicializar Node.js. O comando 'npm install' deve baixar as dependências e o 'npm start' deve subir a API na porta configurada sem erros.
